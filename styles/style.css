@@ -1,0 +1,30 @@
+.post {
+  background-color: lightblue;
+  margin: 20px;
+  justify-content: center;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.post>h4,h6,p,img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#myPosts{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+#div-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+#mealDetailsContainer{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
