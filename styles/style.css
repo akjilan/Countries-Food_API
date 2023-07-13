@@ -1,3 +1,18 @@
+*{
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+.main-title{
+  font-weight: 650px;
+  font-size: 30px;
+  color: rgb(15, 25, 15);
+  letter-spacing: 1px;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+
+
+}
+
 .post {
   background-color: lightblue;
   margin: 20px;
