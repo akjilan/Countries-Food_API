@@ -20,7 +20,7 @@ const addMealDetails = (myMeals) => {
     const newDiv = document.createElement("div");
     newDiv.classList.add("col");
     newDiv.innerHTML = `
-            <div onclick="loadMealDetails('${meal.idMeal}')" class="card">
+            <div  class="card">
               <img src="${
                 meal.strMealThumb
               }" class="card-img-top text-center" alt="...">
@@ -31,6 +31,7 @@ const addMealDetails = (myMeals) => {
                   200
                 )}</p>
               </div>
+              <button class="text-center btn btn-warning my-2" onclick="loadMealDetails('${meal.idMeal}')">See details</button>
             </div>
         `;
     myDiv.appendChild(newDiv);
