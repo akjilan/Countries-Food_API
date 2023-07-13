@@ -33,3 +33,27 @@
   grid-template-columns: repeat(4,1fr);
   padding: 20px 5px;
 }
+/* #phone-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+}
+.phone-card{
+  background-color: lightblue;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+
+} */
+
+.card-img img{
+  width: 50%;
+  border-radius: 15px;
+}
+.card-img{
+  display: flex;
+  justify-content: center;
+}
