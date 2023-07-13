@@ -24,9 +24,9 @@ const searchPhone = () => {
 //                   <h5 class="card-title text-center">${phone.brand}</h5>
 //                   <h5 class="card-title text-center">${phone.phone_name}</h5>
 //                 <p class="card-text text-center">${phone.slug}</p>
-          
+
 //                 </div>
-        
+
 //               </div>
 //           `;
 //     myDiv.appendChild(newDiv);
@@ -45,23 +45,30 @@ const loadphones = (phoneName) => {
 };
 
 const displayPhones = (phones) => {
-  console.log(phones);
+  phones = phones.slice(0, 10);
+  const warningText = document.getElementById("warning-noItemText");
+  if (phones.length == 0) {
+    warningText.style.display = "block";
+  } else {
+    warningText.style.display = "none";
+  }
+
   const phoneContianer = document.getElementById("phone-container");
-  phoneContianer.innerHTML='';
+  phoneContianer.innerHTML = "";
   phones.forEach((phone) => {
     const newDiv = document.createElement("div");
     newDiv.classList.add("col");
     newDiv.innerHTML = `
-            <div  class="card pt-3" style="background-color: lightblue;">
-              <div>
-              <div class="text-center card-img"><img src="${phone.image}" class="card-img-top" alt="..."></div>
-              <div class="card-body">
-                <h5 class="card-title text-center">${phone.phone_name}</h5>
-                <p class="card-text text-center">${phone.slug}</p>
+              <div  class="card pt-3" style="background-color: lightblue;">
+                <div>
+                <div class="text-center card-img"><img src="${phone.image}" class="card-img-top" alt="..."></div>
+                <div class="card-body">
+                  <h5 class="card-title text-center">${phone.phone_name}</h5>
+                  <p class="card-text text-center">${phone.slug}</p>
+                </div>
+                </div>
               </div>
-              </div>
-            </div>
-        `;
+          `;
     phoneContianer.appendChild(newDiv);
   });
 };

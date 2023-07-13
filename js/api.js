@@ -91,14 +91,15 @@ const getCountry=(countries)=>{
     const divContainer = document.getElementById('div-container');
     for(const country of countries){
         const newDiv = document.createElement('div');
+        newDiv.classList.add('post');
         newDiv.innerHTML = `
         <img class="text-center" src="${country.flags.png}" alt="" />
         <h4>name : ${country.name.common}</h4>
         <h4>population : ${country.population}</h4>
-        <button onclick="loadCountryDetails('${country.cca2}')">details</button>
+        <button class="btn btn-primary" onclick="loadCountryDetails('${country.cca2}')">details</button>
         
         `
-        newDiv.classList.add('post');
+        
         divContainer.appendChild(newDiv);
         // console.log(country);
     }
@@ -113,6 +114,7 @@ const loadCountryDetails = (code)=>{
 const loadDetails = (data)=>{
     const divContainer = document.getElementById('DetailsOfCountry');
     const newDiv = document.createElement('div');
+    newDiv.classList.add('post');
     newDiv.innerHTML = `
     <img class="text-center" src="${data[0].flags.png}" alt="" />
     <h4>name : ${data[0].name.common}</h4>
