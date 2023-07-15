@@ -76,3 +76,7 @@
 #warning-noItemText{
   display: none;
 }
+
+.spinner-icon{
+  display: none;
+}

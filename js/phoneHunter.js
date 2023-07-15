@@ -5,35 +5,10 @@ const searchPhone = () => {
   loadphones(myINputFieldText);
 };
 
-// const findPhone = (phoneName) => {
-//   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${phoneName}`;
-//   fetch(url)
-//     .then((res) => res.json())
-//     .then((data) => addPhoneDetails(data));
-// };
-// const addPhoneDetails = (phones) => {
-//   const myDiv = document.getElementById("DetailsOfPhoneContainer");
-//   myDiv.innerHTML = "";
-//   for (const phone of phones) {
-//     const newDiv = document.createElement("div");
-//     newDiv.classList.add("col");
-//     newDiv.innerHTML = `
-//               <div  class="card">
-//                 <img src="${meal.strMealThumb}" class="card-img-top text-center" alt="...">
-//                 <div class="card-body">
-//                   <h5 class="card-title text-center">${phone.brand}</h5>
-//                   <h5 class="card-title text-center">${phone.phone_name}</h5>
-//                 <p class="card-text text-center">${phone.slug}</p>
-
-//                 </div>
-
-//               </div>
-//           `;
-//     myDiv.appendChild(newDiv);
-//   }
-// };
 //load and display phone
 const loadphones = (phoneName) => {
+    const spinnerId = document.getElementById('spinnerId');
+    spinnerId.style.display = 'block';
   const url = `https://openapi.programming-hero.com/api/phones?search=${phoneName}`;
   fetch(url)
     .then((res) => res.json())
@@ -47,8 +22,10 @@ const loadphones = (phoneName) => {
 const displayPhones = (phones) => {
   phones = phones.slice(0, 10);
   const warningText = document.getElementById("warning-noItemText");
+  const spinnerId = document.getElementById('spinnerId');
   if (phones.length == 0) {
     warningText.style.display = "block";
+    spinnerId.style.display = 'none';
   } else {
     warningText.style.display = "none";
   }
@@ -70,5 +47,7 @@ const displayPhones = (phones) => {
               </div>
           `;
     phoneContianer.appendChild(newDiv);
+    const spinnerId = document.getElementById('spinnerId');
+    spinnerId.style.display = 'none';
   });
 };

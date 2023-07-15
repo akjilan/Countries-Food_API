@@ -81,6 +81,8 @@
 
 
 const loadCountries = () =>{
+    const spinnerId = document.getElementById('spinnerId');
+    spinnerId.style.display = 'block';
     const url = 'https://restcountries.com/v3.1/all'
     fetch(url)
     .then(res=>res.json())
@@ -121,7 +123,8 @@ const loadDetails = (data)=>{
     <h4>population : ${data[0].population}</h4>
     `
     divContainer.appendChild(newDiv);
-    
+    const spinnerId = document.getElementById('spinnerId');
+    spinnerId.style.display = 'none';
     console.log(data[0]);
 }
 
