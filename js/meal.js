@@ -12,7 +12,7 @@ const findFood = (mealName) => {
   fetch(url)
     .then((res) => res.json())
     .then((data) => addMealDetails(data));
-  
+
 };
 
 // <h3>id meal is : ${meal.idMeal}</h3>
@@ -24,23 +24,21 @@ const addMealDetails = (myMeals) => {
     newDiv.classList.add("col");
     newDiv.innerHTML = `
             <div  class="card">
-              <img src="${
-                meal.strMealThumb
-              }" class="card-img-top text-center" alt="...">
+              <img src="${meal.strMealThumb
+      }" class="card-img-top text-center" alt="...">
               <div class="card-body">
                 <h5 class="card-title text-center">${meal.strMeal}</h5>
                 <p class="card-text text-center">${meal.strInstructions.slice(
-                  0,
-                  200
-                )}</p>
+        0,
+        200
+      )}</p>
               </div>
-              <button class="text-center btn btn-warning my-2" onclick="loadMealDetails('${
-                meal.idMeal
-              }')">See details</button>
+              <button class="text-center btn btn-warning my-2" onclick="loadMealDetails('${meal.idMeal
+      }')">See details</button>
             </div>
         `;
     myDiv.appendChild(newDiv);
-  
+
     const spinnerId = document.getElementById("spinnerId");
     spinnerId.style.display = "none";
   }

@@ -20,34 +20,58 @@
         <input type="text " id="phoneInputField" placeholder="ex:iphone/samsung...">
         <button onclick="searchPhone()" class="btn btn-warning">search</button>
     </section>
-   <section>
-    <div id="DetailsOfPhoneContainer">
-    </div>
-    <div class="d-flex my-4 text-center justify-content-center ">
-        <a href="index.html" class="ms-2 mb-4"><button class="btn btn-primary ">Dashboard</button></a>
-    </div>
-   <section class="container">
-    <div id="phone-container" class="row  row-cols-1 row-cols-md-3 g-4">
+    <section>
+        <div id="DetailsOfPhoneContainer">
+        </div>
+        <div class="d-flex my-4 text-center justify-content-center ">
+            <a href="index.html" class="ms-2 mb-4"><button class="btn btn-primary ">Dashboard</button></a>
+        </div>
+        <section class="container">
+            <div id="phone-container" class="row  row-cols-1 row-cols-md-3 g-4 phones-container">
 
-    </div>
-    <div id="warning-noItemText" class=" text-center">
-        <h2 class="text-center text-dark">Sorry , no items has been found.</h2>
-    </div>
-   </section>
-   </section>
-   <section id="spinnerId" class="mt-5 spinner-icon ">
-    <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
-      <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
+            </div>
+            <div id="warning-noItemText" class=" text-center">
+                <h2 class="text-center text-dark">Sorry , no items has been found.</h2>
+            </div>
+        </section>
+        <section id="showAllId" class="text-center p-4 d-none">
+            <button id="showAllItemsButtonid" class="btn btn-primary">Show all </button>
+
+        </section>
+    </section>
+    <section id="spinnerId" class="mt-5 spinner-icon ">
+        <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </section>
+    <!-- this is phone details section using modal  -->
+    <section>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center" id="modalBOdyId">
+            <img id src="" alt="">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
       </div>
     </div>
-   </section>
+  </div>
+    </section>
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-
-
-
     <script src="js/phoneHunter.js"></script>
 </body>
 
