@@ -2,13 +2,21 @@
   font-family: sans-serif;
   letter-spacing: 1px;
 }
+.landing-page{
+  background-color: rgb(21, 21, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .main-title{
   font-weight: 650px;
   font-size: 30px;
-  color: rgb(15, 25, 15);
+  color: rgb(255, 255, 255);
   letter-spacing: 1px;
   font-family: 'Times New Roman', Times, serif;
   text-transform: uppercase;
+  padding-top: 30px;
 
 
 }
