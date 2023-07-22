@@ -1,25 +1,28 @@
-*{
+* {
   font-family: sans-serif;
   letter-spacing: 1px;
 }
-.landing-page{
+.title-search {
+  border-bottom: 1px solid white;
+  border-radius: 3px;
+  padding: 7px 0 ;
+
+}
+.landing-page {
   background-color: rgb(21, 21, 32);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.main-title{
+.main-title {
   font-weight: 650px;
   font-size: 30px;
   color: rgb(255, 255, 255);
   letter-spacing: 3px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   text-transform: uppercase;
   padding-top: 30px;
-
-
-
 }
 
 .post {
@@ -33,28 +36,31 @@
   flex-direction: column;
   border-radius: 10px;
 }
-.post>h4,h6,p,img{
+.post > h4,
+h6,
+p,
+img {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-#myPosts{
+#myPosts {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
-#div-container{
+#div-container {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
-#mealDetailsContainer{
+#mealDetailsContainer {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
-#DetailsOfCountry{
+#DetailsOfCountry {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding: 20px 5px;
 }
 /* #phone-container{
@@ -73,25 +79,30 @@
 
 } */
 
-.card-img img{
+.card-img img {
   width: 50%;
   border-radius: 15px;
 }
-.card-img{
+.card-img {
   display: flex;
   justify-content: center;
 }
 
-#warning-noItemText{
+#warning-noItemText {
   display: none;
 }
 
-.spinner-icon{
+.spinner-icon {
   display: none;
 }
 
-
-#temperature-section{
+#temperature-section {
   margin-top: 10%;
-  
+}
+
+
+
+.lower{
+  padding: 15px 0 ;
+  border-bottom: 1px solid white;
 }
